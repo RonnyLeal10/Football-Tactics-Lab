@@ -1,0 +1,172 @@
+
+/* Configurações gerais */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 32px 16px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #071b16;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estrutura principal */
+
+.container {
+    width: 100%;
+    max-width: 680px;
+}
+
+/* Cabeçalho */
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.header h1 span {
+    color: #a3e635;
+}
+
+.header p {
+    color: #a5b8af;
+    font-size: 15px;
+    margin-top: 12px;
+}
+
+/* Cartão de configuração */
+
+.card {
+    background: #102b23;
+    border: 1px solid #285043;
+    border-radius: 20px;
+    padding: 34px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.card-title {
+    font-size: 21px;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+
+.card-description {
+    color: #9cb6a8;
+    font-size: 14px;
+    margin: 0 0 30px;
+    line-height: 1.6;
+}
+
+/* Títulos das secções */
+
+.section-label {
+    color: #a3e635;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.divider {
+    height: 1px;
+    background: #285043;
+    margin: 30px 0;
+}
+
+/* Campos do formulário */
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.hint {
+    display: block;
+    color: #91aa9d;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+select,
+input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #376052;
+    border-radius: 10px;
+    background: #092019;
+    color: #ffffff;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+select:focus,
+input:focus {
+    border-color: #a3e635;
+    box-shadow: 0 0 0 3px rgba(163, 230, 53, 0.15);
+}
+
+select {
+    cursor: pointer;
+}
+
+/* Campos lado a lado */
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Rodapé */
+
+.footer {
+    text-align: center;
+    color: #769184;
+    font-size: 12px;
+    margin-top: 24px;
+}
+
+/* Adaptação a telemóveis */
+
+@media (max-width: 520px) {
+    .card {
+        padding: 24px;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}

@@ -1,39 +1,114 @@
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>Configuração - Football Tactics Lab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Football Tactics Lab | Configuração</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='config.css') }}">
 </head>
+
 <body>
-    <h1>Football Tactics Lab</h1>
-    <h2>Configuração da atividade</h2>
+    <main class="container">
 
-    <label for="tema">Tema tático:</label>
-    <select id="tema" name="tema">
-        <option value="ataque">Ataque</option>
-        <option value="defesa">Defesa</option>
-        <option value="transicao">Transição</option>
-    </select>
+        <!-- Cabeçalho -->
+        <header class="header">
+            <div class="logo">⚽</div>
 
-    <br><br>
+            <h1>FOOTBALL <span>TACTICS LAB</span></h1>
 
-    <label for="dificuldade">Dificuldade:</label>
-    <select id="dificuldade" name="dificuldade">
-        <option value="facil">Fácil</option>
-        <option value="medio">Médio</option>
-        <option value="dificil">Difícil</option>
-    </select>
+            <p>Plataforma de treino e análise de decisões táticas</p>
+        </header>
 
-    <br><br>
+        <!-- Painel de configuração -->
+        <section class="card">
 
-    <label for="num_cenarios">Número de cenários:</label>
-    <input type="number" id="num_cenarios" name="num_cenarios"
-           min="1" max="20" value="5">
+            <h2 class="card-title">Configuração da atividade</h2>
 
-    <br><br>
+            <p class="card-description">
+                Personaliza os exercícios táticos para os teus alunos.
+                Defina o tema, o nível de dificuldade e os parâmetros
+                da sessão de treino.
+            </p>
 
-    <label for="tempo_limite">Tempo limite (minutos):</label>
-    <input type="number" id="tempo_limite" name="tempo_limite"
-           min="1" max="60" value="15">
+            <div class="section-label">01 / Estratégia de jogo</div>
+
+            <!-- Tema -->
+            <div class="form-group">
+                <label for="tema">Tema tático</label>
+
+                <select id="tema" name="tema">
+                    <option value="ataque">⚽ Ataque</option>
+                    <option value="defesa">🛡️ Defesa</option>
+                    <option value="transicao">🔄 Transição</option>
+                </select>
+
+                <span class="hint">
+                    Seleciona a componente tática a trabalhar.
+                </span>
+            </div>
+
+            <!-- Dificuldade -->
+            <div class="form-group">
+                <label for="dificuldade">Nível de dificuldade</label>
+
+                <select id="dificuldade" name="dificuldade">
+                    <option value="facil">Fácil — Iniciação</option>
+                    <option value="medio">Médio — Intermédio</option>
+                    <option value="dificil">Difícil — Avançado</option>
+                </select>
+
+                <span class="hint">
+                    Ajusta a complexidade dos cenários apresentados.
+                </span>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section-label">02 / Parâmetros do treino</div>
+
+            <!-- Parâmetros numéricos -->
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="num_cenarios">Número de cenários</label>
+
+                    <input
+                        type="number"
+                        id="num_cenarios"
+                        name="num_cenarios"
+                        min="1"
+                        max="20"
+                        value="5"
+                    >
+
+                    <span class="hint">Entre 1 e 20 cenários.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="tempo_limite">Tempo limite (min)</label>
+
+                    <input
+                        type="number"
+                        id="tempo_limite"
+                        name="tempo_limite"
+                        min="1"
+                        max="60"
+                        value="15"
+                    >
+
+                    <span class="hint">Entre 1 e 60 minutos.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rodapé -->
+        <footer class="footer">
+            FOOTBALL TACTICS LAB · Activity Provider · Inven!RA
+        </footer>
+
+    </main>
 </body>
 </html>
